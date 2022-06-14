@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "oceania_geol_slip_rates",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "dextral_rate": 0.0, "dextral_err": 0.0, "extension_rate": 0.0, "extension_err": 0.0, "source": "asdf", "notes": "asdf", "fault_seg": "asdf", "include": false }, "geometry": { "type": "Point", "coordinates": [ 145.084755819723824, -10.202328236442646 ] } },
+{ "type": "Feature", "properties": { "dextral_rate": null, "dextral_err": null, "extension_rate": 11.7, "extension_err": 3.5, "source": "Webber et al. 2018 Geology", "notes": null, "fault_seg": "ocnf007", "include": true }, "geometry": { "type": "Point", "coordinates": [ 149.270328649202099, -9.673722676089216 ] } }
+]
+}
