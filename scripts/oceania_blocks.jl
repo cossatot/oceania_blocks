@@ -22,9 +22,9 @@ ocn_fault_file = "/home/itchy/research/geodesy/global_block_comps/oceania_blocks
 ocn_geol_slip_rate_file = "/home/itchy/research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_geol_slip_rates.geojson"
 
 # chn
-chn_block_file = "/home/itchy/research/gem/fault_data/china/block_data/chn_blocks.geojson"
-chn_fault_file = "/home/itchy/research/gem/fault_data/china/block_data/chn_faults.geojson"
-chn_slip_rate_file = "/home/itchy/research/gem/fault_data/china/block_data/geol_slip_rate_pts.geojson"
+chn_block_file = "/home/itchy/research/geodesy/global_block_comps/china/block_data/chn_blocks.geojson"
+chn_fault_file = "/home/itchy/research/geodesy/global_block_comps/china/block_data/chn_faults.geojson"
+chn_slip_rate_file = "/home/itchy/research/geodesy/global_block_comps/china/block_data/geol_slip_rate_pts.geojson"
 
 # jpn
 izu_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/izu_slab2.geojson"
@@ -48,6 +48,7 @@ sul_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_
 sol_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sol_slab2.geojson"
 sum_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sum_slab2.geojson"
 van_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/van_slab2.geojson"
+izu_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/izu_slab2.geojson"
 
 # bounds files
 ocn_bounds_file = "../block_data/oceania_bounds.geojson"
@@ -148,15 +149,17 @@ png_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(png_tris_file))
 van_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(van_tris_file))
 cot_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(cot_tris_file))
 phi_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(phi_tris_file))
+izu_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(izu_tris_file))
 
 tris = vcat(
             sol_tris,
             van_tris,
             #png_tris,
             sum_tris,
-            #cot_tris,
-            #phi_tris,
+            cot_tris,
+            phi_tris,
             #sul_tris,
+            #izu_tris,
             )
 
 
