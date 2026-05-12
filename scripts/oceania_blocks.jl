@@ -12,50 +12,61 @@ using PyPlot
 
 # options
 geol_slip_rate_weight = 2.
-save_results = true
+save_results = false
+
+
+# host
+host = "snake"
+if host == "snake"
+    _path = "/hamhocks/"
+elseif host == "tumwater"
+    _path = "/home/itchy/"
+elseif host == "santiam"
+    _path = "/Users/itchy/"
+end
 
 # load data
 
 # ocn
-ocn_block_file = "/home/itchy/research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_blocks.geojson"
-ocn_fault_file = "/home/itchy/research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_faults.geojson"
-ocn_geol_slip_rate_file = "/home/itchy/research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_geol_slip_rates.geojson"
+ocn_block_file = _path * "research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_blocks.geojson"
+ocn_fault_file = _path * "research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_faults.geojson"
+ocn_geol_slip_rate_file = _path * "research/geodesy/global_block_comps/oceania_blocks/block_data/oceania_geol_slip_rates.geojson"
 
 # chn
-chn_block_file = "/home/itchy/research/geodesy/global_block_comps/china/block_data/chn_blocks.geojson"
-chn_fault_file = "/home/itchy/research/geodesy/global_block_comps/china/block_data/chn_faults.geojson"
-chn_slip_rate_file = "/home/itchy/research/geodesy/global_block_comps/china/block_data/geol_slip_rate_pts.geojson"
+chn_block_file = _path * "research/geodesy/global_block_comps/china_active_faults/block_data/chn_blocks.geojson"
+chn_fault_file = _path * "research/geodesy/global_block_comps/china_active_faults/block_data/chn_faults.geojson"
+chn_slip_rate_file = _path * "research/geodesy/global_block_comps/china_active_faults/block_data/geol_slip_rate_pts.geojson"
 
 # jpn
-izu_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/izu_slab2.geojson"
+izu_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/izu_slab2.geojson"
 
 # phl
 
-phl_block_file = "/home/itchy/research/geodesy/global_block_comps/phil_blocks/block_data/phl_blocks.geojson"
-phl_fault_file = "/home/itchy/research/geodesy/global_block_comps/phil_blocks/block_data/phl_faults.geojson"
+phl_block_file = _path * "research/geodesy/global_block_comps/phil_blocks/block_data/phl_blocks.geojson"
+phl_fault_file = _path * "research/geodesy/global_block_comps/phil_blocks/block_data/phl_faults.geojson"
 
 # glo
-glo_block_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_plates.geojson"
-glo_fault_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_faults.geojson"
-glo_slip_rates_file = "/home/itchy/research/geodesy/global_block_comps/global_scale_plates/global_scale_slip_rates.geojson"
+glo_block_file = _path * "research/geodesy/global_block_comps/global_scale_plates/global_scale_plates.geojson"
+glo_fault_file = _path * "research/geodesy/global_block_comps/global_scale_plates/global_scale_faults.geojson"
+glo_slip_rates_file = _path * "research/geodesy/global_block_comps/global_scale_plates/global_scale_slip_rates.geojson"
 
 # tris
-png_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/png_slab2.geojson"
-phi_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/phi_slab2.geojson"
-man_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/man_slab2.geojson"
-cot_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/cot_slab2.geojson"
-sul_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sul_slab2.geojson"
-sol_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sol_slab2.geojson"
-sum_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/sum_slab2.geojson"
-van_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/van_slab2.geojson"
-izu_tris_file = "/home/itchy/research/geodesy/global_block_comps/subduction/sub_tri_meshes/izu_slab2.geojson"
+png_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/png_slab2.geojson"
+phi_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/phi_slab2.geojson"
+man_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/man_slab2.geojson"
+cot_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/cot_slab2.geojson"
+sul_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/sul_slab2.geojson"
+sol_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/sol_slab2.geojson"
+sum_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/sum_slab2.geojson"
+van_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/van_slab2.geojson"
+izu_tris_file = _path * "research/geodesy/global_block_comps/subduction/sub_tri_meshes/izu_slab2.geojson"
 
 # bounds files
 ocn_bounds_file = "../block_data/oceania_bounds.geojson"
 
 # geodesy
-gsrm_vels_file = "/home/itchy/research/geodesy/gsrm/gps/gps_su.geojson"
-hsu_vels_file = "/home/itchy/research/geodesy/global_block_comps/phil_blocks/geod/hsu_luzon_campaign_vels.geojson"
+gsrm_vels_file = _path * "research/geodesy/gsrm/gps/gps_su.geojson"
+hsu_vels_file = _path * "research/geodesy/global_block_comps/phil_blocks/geod/hsu_luzon_campaign_vels.geojson"
 
 
 @info "joining blocks"
@@ -137,19 +148,20 @@ println("n gnss vels: ", length(gnss_vels))
 @info "putting it all together"
 vels = vcat(fault_vels,
             gnss_vels,
-            geol_slip_rate_vels
+            geol_slip_rate_vels,
+            bound_vels,
             )
 
 
 @info "doing tris"
-sol_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(sol_tris_file))
-sul_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(sul_tris_file))
-sum_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(sum_tris_file))
-png_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(png_tris_file))
-van_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(van_tris_file))
-cot_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(cot_tris_file))
-phi_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(phi_tris_file))
-izu_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(izu_tris_file))
+sol_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(sol_tris_file), depth_units="km", depth_positive=false)
+sul_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(sul_tris_file), depth_units="km", depth_positive=false)
+sum_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(sum_tris_file), depth_units="km", depth_positive=false)
+png_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(png_tris_file), depth_units="km", depth_positive=false)
+van_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(van_tris_file), depth_units="km", depth_positive=false)
+cot_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(cot_tris_file), depth_units="km", depth_positive=false)
+phi_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(phi_tris_file), depth_units="km", depth_positive=false)
+izu_tris = Oiler.IO.tris_from_geojson(JSON.parsefile(izu_tris_file), depth_units="km", depth_positive=false)
 
 tris = vcat(
             sol_tris,
@@ -165,7 +177,7 @@ tris = vcat(
 
 println("n total vels: ", length(vels))
 vel_groups = Oiler.group_vels_by_fix_mov(vels)
-tri_distance_weight = 5.
+tri_distance_weight = 100.
 
 
 @info "Solving"
@@ -181,8 +193,8 @@ tri_distance_weight = 5.
             check_closures=false,
             check_nans=true,
             sparse_lhs=true,
-            constraint_method="kkt_sym",
-            factorization="lu")
+            factorization="reduce",
+        )
 
 
 Oiler.WebViewer.write_web_viewer(results=results, block_df=block_df,
